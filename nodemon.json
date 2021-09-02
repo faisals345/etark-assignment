@@ -2,6 +2,6 @@
     "env":{
         "DB_USER":"faiz",
         "DB_PASSWORD":"FJfa34bpFZmZyWu",
-        "DB_NAME": "mern"
+        "DB_NAME": "Express"
     }
 }

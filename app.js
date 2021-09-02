@@ -45,7 +45,7 @@ app.use((req,res,next)=>{
 
 mongoose
   .connect(
-    `mongodb+srv://faiz:FJfa34bpFZmZyWu@clusteretark.l4gac.mongodb.net/Express?retryWrites=true&w=majority`
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@clusteretark.l4gac.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
     
   )
   .then(() => {

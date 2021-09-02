@@ -12,6 +12,7 @@ const HttpError = require('./models/http-error');
 const app = express();
 
 app.use(express.json());
+app.use(express.static("public"))
 
 
 
@@ -30,6 +31,10 @@ app.use((req,res,next)=>{
 app.use('/login',loginRoutes);
 app.use('/signup',signupRoutes);
 app.use('/home',homeRoutes);
+
+app.get("/", function (req, res) {
+  res.send("<h1>Hello World!</h1>")
+})
 
 app.use((req,res,next)=>{
     const error = new HttpError('could not find this route',404);

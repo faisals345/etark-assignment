@@ -28,9 +28,9 @@ app.use((req,res,next)=>{
 });
 
 
-app.use('/login',loginRoutes);
-app.use('/signup',signupRoutes);
-app.use('/home',homeRoutes);
+app.use('/api/login',loginRoutes);
+app.use('/api/signup',signupRoutes);
+app.use('/api/home',homeRoutes);
 
 app.get("/", function (req, res) {
   res.send("<h1>Hello World!</h1>")
